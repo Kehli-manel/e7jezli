@@ -1,0 +1,33 @@
+@import url(../styles/about-style.css);
+@import url(../styles/style.css);
+
+.banner{
+    background-image: url(../imgs/vecteezy_double-decker-bus-rushes-through-illuminated-city-streets_25121679.jpg);
+}
+
+.sec4-card-box{
+    margin:100px;
+    justify-content: start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.blog-img{
+    height: 150px;
+}
+.section4-card{
+    width: 250px;
+    height: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.blog-info{
+    padding: 10px;
+}
+.blog-date{
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.blog-info p{
+    margin-top: 10px;
+    font-size: 10px;
+}

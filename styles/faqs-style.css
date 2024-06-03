@@ -1,0 +1,66 @@
+@import url(../styles/about-style.css);
+@import url(../styles/style.css);
+
+.banner{
+    background-image: url(../imgs/vecteezy_station-buses-illustration-background_26727044.jpg);
+}
+
+.faq-header{
+    text-align: center;
+    width: 80%;
+    margin: 100px auto;
+}
+.faq-header h1{
+    color: rgb(61, 61, 61);
+    margin-bottom: 30px;
+}
+.faq-header p{
+    color: rgb(82, 81, 81);
+    line-height:30px;
+}
+
+.faq-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 100px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+details {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+details p{
+    color: rgb(82, 81, 81);
+    width: 80%;
+    font-size: 14px;
+}
+
+details[open] summary {
+    color: #0a78d1;
+}
+
+details[open] summary::after {
+    content: "-";
+    float: right;
+}
+
+summary::after {
+    content: "+";
+    float: right;
+}

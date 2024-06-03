@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/signup-style.css">
+</head>
+
+<body>
+    <div class="img-container"><img src="../imgs/signup.jpg" class="singin-img"></div>
+    <div class="form-container">
+        <a href="./index.html"><img src="../imgs/logo.png" class="logo"></a>
+        <h1>Welcome To E7JEZLI</h1>
+        <p>Sign Up your Account</p>
+        <form action="login">
+            <div class="form-div">
+                <div>
+                    <label for="username">First Name</label>
+                    <input type="text" name="firstName" id="firstname" required placeholder="Enter Your First Name">
+                </div>
+                <div>
+                    <label for="last name">Last Name</label>
+                    <input type="text" name="lastName" placeholder="Enter Your Last Name" required>
+                </div>
+            </div>
+            <div class="form-div">
+                <div>
+                    <label for="country">Country</label>
+                    <input list="list" placeholder="Enter Your Country" name="country">
+                    <datalist id="list">
+                        <option value="Alger">
+                        <option value="Setif">
+                        <option value="Bejaia">
+                        <option value="Oran">
+                        <option value="Batna">
+                    </datalist>
+                </div>
+                <div>
+                    <label for="mobile">Mobile</label>
+                    <input type="number" name="mobile" placeholder="Enter Your Phone Number" required>
+                </div>
+            </div>
+            <div class="form-div">
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" required placeholder="Enter Your Username">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Enter Your Email" required>
+                </div>
+            </div>
+            <div class="form-div">
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="username" placeholder="Enter Your Password" required>
+                </div>
+                <div>
+                    <label for="password">Confirm Password</label>
+                    <input type="password" name="confPassword" placeholder="Confirm Password" required>
+                </div>
+            </div>
+            <div class="accept">
+                <input type="checkbox">
+                <p>Accepting all (Refund Policy, Ticket Policies, Terms and Conditions)</p>
+            </div>
+            <button type="submit">Log In</button>
+        </form>
+        <div class="signin">
+            <p>Already have an Account?</p>
+            <a href="./signin.html"><button>Sing In</button></a>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+
+</html>

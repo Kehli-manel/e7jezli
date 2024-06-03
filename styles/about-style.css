@@ -1,0 +1,478 @@
+@import url(../styles/style.css);
+
+* {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/*header*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+    background-color: rgb(252, 252, 252);
+    color: rgb(110, 110, 110);
+    font-size: 14px;
+}
+
+header img {
+    width: 20px;
+}
+
+.s1,
+.s2,
+.s3 {
+    display: flex;
+    align-items: center;
+}
+
+.s1,
+.s3 {
+    gap: 20px;
+}
+
+.s2 {
+    gap: 5px;
+}
+
+.s3 {
+    border: rgb(212, 211, 211) solid 0.5px;
+    border-radius: 5px;
+    padding: 0px 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.s3 a {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #339af0;
+}
+
+.s3 p {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(168, 167, 167);
+}
+
+.s1 select {
+    color: rgb(133, 132, 132);
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.show-header header {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+}
+
+/*navbar*/
+nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #ffff;
+    z-index: 10;
+    justify-content: space-between;
+    padding: 1px 100px;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(150,150,150,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(150,150,150,1);
+    box-shadow: 0px 0px 5px 0px rgba(150,150,150,1);
+}
+
+nav img {
+    width: 100px;
+    padding: 0px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    transition: 400ms;
+
+}
+
+nav .nav-a {
+    color: rgb(61, 61, 61);
+    font-weight: 500;
+}
+
+nav .nav-a:hover {
+    color: #0a78d1;
+    font-weight: 600;
+    border-bottom: #0a78d1 solid 0.5px;
+}
+
+nav button {
+    background-color: #339af0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+nav button:hover {
+    background-color: #5eaae9;
+    transform: scale(1.05);
+}
+
+nav a button{
+    color: white;
+}
+
+
+/*navbar md*/
+nav .open-btn,
+nav .close-btn {
+    cursor: pointer;
+    background-color: transparent;
+    display: none;
+}
+
+nav .open-btn:hover,
+nav .close-btn:hover {
+    background-color: transparent;
+}
+
+nav .open-btn img,
+ul .close-btn img {
+    width: 20px;
+}
+
+body.show nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: auto;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+body.show nav ul .close-btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/*banner*/
+
+.banner{
+    background-image: url('../imgs/vecteezy_close-up-photo-of-school-bus-on-the-road-generative-ai_30710246.jpg');
+    background-size: cover;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    min-height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+}
+
+
+/*main*/
+
+.main1{
+    display: flex;
+    margin: auto;
+    padding: 100px;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.main1 h1, .main2 h2{
+    color: rgb(61, 61, 61);
+    margin-bottom: 30px;
+}
+.main1 p, .main2 p{
+    color: rgb(82, 81, 81);
+    line-height:30px;
+}
+.main1 img{
+    width: 550px;
+}
+.main2{
+    margin: auto;
+    padding: 0px 100px 100px 100px;
+}
+.main2 ul{
+    line-height: 35px;
+    color: rgb(82, 81, 81);
+}
+
+/*footer*/
+footer{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px;
+    background-color: rgb(36, 36, 36);
+    color: #ffff; 
+}
+footer .f1{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    
+}
+footer .f1 p{
+    font-size: 14px;
+    color: rgb(168, 168, 168);
+    width: 400px;
+}
+.f-logo{
+    width: 200px;
+}
+.f-logo img{
+    width: 200px;
+}
+.icons-box{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.icons-box img{
+    cursor: pointer;
+    width: 30px;
+    padding: 5px;
+    border: rgb(133, 132, 132) solid 1px;
+    border-radius: 50%;
+    transition: 400ms;
+}
+.icons-box img:hover{
+    background-color: #0a78d1;
+    border: #0a78d1 solid 1px;
+}
+footer .f2{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    text-align: start;
+    
+}
+footer .f2 ul{
+    list-style: none;
+    margin-left: -35px;
+}
+.f2 li{
+    cursor: pointer;
+    transition: 400ms;
+    margin-top: 10px;
+}
+.f2 li:hover{
+    color: rgb(248, 122, 77) ;
+}
+.f2 h2{
+    color: #0a78d1;
+    text-decoration: underline 1px;
+    
+}
+.f3-info{
+    display: flex;
+    gap: 10px;
+}
+.f3-info img{
+    width: 20px;
+}
+
+@media (max-width:950px){
+    .main1 img{
+        width: 400px;
+    }
+    .main1{
+        flex-wrap: wrap;
+        padding: 50px;
+        margin: auto;
+        text-align: center;
+    }
+}
+@media screen and (min-width:850px) and (max-width:1000px) {
+    .lottie {
+        width: 150px;
+
+    }
+
+    .baner-1 h1 {
+        font-size: 30px;
+    }
+
+    .baner-2 {
+        padding: 0px;
+    }
+
+    .baner-2 form {
+        padding: 50px;
+    }
+
+    .position input {
+        width: 130px;
+    }
+
+    .date-input {
+        width: 300px;
+    }
+}
+
+@media (min-width:650px) and (max-width:850px) {
+    header {
+        display: none;
+    }
+
+    nav {
+        padding: 5px 20px 5px 50px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav button {
+        padding: 2px 10px;
+    }
+
+    nav .open-btn {
+        display: block;
+    }
+
+    .baner {
+        background-image: url("./imgs/baner-md.jpg");
+
+        flex-direction: column;
+    }
+
+    .baner-1 h1 {
+        font-size: 35px;
+        margin: auto;
+    }
+
+    .baner-2 form {
+        padding: auto;
+
+    }
+
+    .position {
+        margin: auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .position input {
+        width: 150px;
+    }
+
+    .date-input {
+        width: 300px;
+
+    }
+
+    .baner-2 {
+        margin-top: 0px;
+    }
+
+
+}
+
+@media (max-width:650px) {
+    header {
+        display: none;
+    }
+
+    nav {
+        padding: 5px 20px 5px 50px;
+    }
+
+    nav button {
+        padding: 2px 10px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav .open-btn {
+        display: block;
+    }
+
+    .baner {
+        background-image: url("./imgs/baner-md.jpg");
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .baner-1 h1 {
+        font-size: 30px;
+        margin: auto;
+    }
+
+    .baner-2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .baner-2 form {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 200px;
+        margin-bottom: 30px;
+        height: 250px;
+
+    }
+
+    .position {
+        margin: auto;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .position input {
+        width: 100%;
+    }
+
+    .date-input {
+        width: 100%;
+
+    }
+
+    .baner-2 {
+        margin-top: 0px;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer .f1 p{
+        width: 100%;
+    }
+
+}
