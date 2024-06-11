@@ -19,32 +19,33 @@
         <a href="./index.html"><img src="../imgs/logo.png" class="logo"></a>
         <h1>Welcome To E7JEZLI</h1>
         <p>Sign Up your Account</p>
-        <form action="login">
+        <form  id="registerForm">
             <div class="form-div">
                 <div>
                     <label for="username">First Name</label>
-                    <input type="text" name="firstName" id="firstname" required placeholder="Enter Your First Name">
+                    <input type="text" name="firstName" id="firstName" required placeholder="Enter Your First Name">
                 </div>
                 <div>
                     <label for="last name">Last Name</label>
-                    <input type="text" name="lastName" placeholder="Enter Your Last Name" required>
+                    <input type="text" name="lastName" id="lastName" placeholder="Enter Your Last Name" required>
                 </div>
             </div>
             <div class="form-div">
                 <div>
                     <label for="country">Country</label>
-                    <input list="list" placeholder="Enter Your Country" name="country">
+                    <input type="text" id="country" placeholder="enter your country" name="country">
+                    <!--<input list="list" placeholder="Enter Your Country" name="country">
                     <datalist id="list">
                         <option value="Alger">
                         <option value="Setif">
                         <option value="Bejaia">
                         <option value="Oran">
                         <option value="Batna">
-                    </datalist>
+                    </datalist>-->
                 </div>
                 <div>
                     <label for="mobile">Mobile</label>
-                    <input type="number" name="mobile" placeholder="Enter Your Phone Number" required>
+                    <input type="number" name="mobile" id="mobile" placeholder="Enter Your Phone Number" required>
                 </div>
             </div>
             <div class="form-div">
@@ -54,24 +55,21 @@
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Enter Your Email" required>
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
                 </div>
             </div>
             <div class="form-div">
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="username" placeholder="Enter Your Password" required>
+                    <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
                 </div>
-                <div>
-                    <label for="password">Confirm Password</label>
-                    <input type="password" name="confPassword" placeholder="Confirm Password" required>
-                </div>
+                
             </div>
             <div class="accept">
                 <input type="checkbox">
                 <p>Accepting all (Refund Policy, Ticket Policies, Terms and Conditions)</p>
             </div>
-            <button type="submit">Log In</button>
+            <button type="submit">Sing Up</button>
         </form>
         <div class="signin">
             <p>Already have an Account?</p>
@@ -79,6 +77,37 @@
         </div>
     </div>
     <script src="../script.js"></script>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const firstName= document.getElementById('firstName').value;
+            const lastName= document.getElementById('lastName').value;
+            const country= document.getElementById('country').value;
+            const mobile= document.getElementById('mobile').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const email = document.getElementById('email').value;
+            
+
+            fetch('http://localhost:3000/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ firstName, lastName, country, mobile, username, email, password})
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                window.location.href = './index.html';
+            })
+            .catch(error => {
+                
+                console.error('Error:', error);
+            });
+        });
+    </script>
 </body>
 
 </html>
